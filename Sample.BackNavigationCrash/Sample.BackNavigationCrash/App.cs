@@ -12,8 +12,9 @@ namespace Sample.BackNavigationCrash
         public App()
         {
             // The root page of your application
-            MainPage = new ContentPage
+            MainPage = new NavigationPage(new ContentPage
             {
+                Title = "ContentPage",
                 Content = new StackLayout
                 {
                     VerticalOptions = LayoutOptions.Center,
@@ -24,7 +25,7 @@ namespace Sample.BackNavigationCrash
                         }
                     }
                 }
-            };
+            });
         }
 
         protected override void OnStart()
