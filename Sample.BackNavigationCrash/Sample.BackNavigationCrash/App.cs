@@ -1,31 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Sample.BackNavigationCrash
 {
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Sample.BackNavigationCrash.Pages;
+
     public class App : Application
     {
+        private INavigation navigationController;
+
         public App()
         {
             // The root page of your application
-            MainPage = new NavigationPage(new ContentPage
+            AsyncHelpers.RunSynchronously(async () => await this.NavigateAsync(new ContentPage1()));
+        }
+
+        public async Task NavigateAsync(Page page)
+        {
+            if (this.MainPage == null)
             {
-                Title = "ContentPage",
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            XAlign = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
-                    }
-                }
-            });
+                this.MainPage = new NavigationPage(page);
+                this.navigationController = this.MainPage.Navigation;
+            }
+            else
+            {
+                await this.navigationController.PushAsync(page);
+            }
+        }
+
+        public async Task GoBackAsync()
+        {
+            if (this.navigationController?.NavigationStack.LastOrDefault() == null)
+            {
+                return;
+            }
+
+            await this.navigationController.PopAsync();
         }
 
         protected override void OnStart()

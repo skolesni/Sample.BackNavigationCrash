@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Sample.BackNavigationCrash;assembly=Sample.BackNavigationCrash"
+    x:Class="Sample.BackNavigationCrash.Pages.ContentPage2"
+    Title="ContentPage2">
+
+    <Button Text="Go back" VerticalOptions="Center">
+        <Button.Command>
+            <local:NavigateBackCommand/>
+        </Button.Command>
+    </Button>
+</ContentPage>
