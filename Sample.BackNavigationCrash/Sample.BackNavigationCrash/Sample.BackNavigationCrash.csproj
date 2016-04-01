@@ -40,11 +40,32 @@
     <Compile Include="ExclusiveSynchronizationContext.cs" />
     <Compile Include="NavigateBackCommand.cs" />
     <Compile Include="NavigateToPageCommand.cs" />
+    <Compile Include="Pages\ContentPage6.xaml.cs">
+      <DependentUpon>ContentPage6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ContentPage5.xaml.cs">
+      <DependentUpon>ContentPage5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ContentPage4.xaml.cs">
+      <DependentUpon>ContentPage4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ContentPage3.xaml.cs">
+      <DependentUpon>ContentPage3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ContentPage2.xaml.cs">
       <DependentUpon>ContentPage2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ContentPage1.xaml.cs">
       <DependentUpon>ContentPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MasterDetailPage2.xaml.cs">
+      <DependentUpon>MasterDetailPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MasterDetailPage1.xaml.cs">
+      <DependentUpon>MasterDetailPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MenuContentPage.xaml.cs">
+      <DependentUpon>MenuContentPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -74,6 +95,48 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\ContentPage2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\MasterDetailPage1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\MenuContentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ContentPage3.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ContentPage4.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\MasterDetailPage2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ContentPage5.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ContentPage6.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

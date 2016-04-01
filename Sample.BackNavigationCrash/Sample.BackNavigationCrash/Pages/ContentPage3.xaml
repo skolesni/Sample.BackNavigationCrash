@@ -4,14 +4,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Sample.BackNavigationCrash;assembly=Sample.BackNavigationCrash"
     xmlns:pages="clr-namespace:Sample.BackNavigationCrash.Pages;assembly=Sample.BackNavigationCrash"
-    x:Class="Sample.BackNavigationCrash.Pages.ContentPage2"
-    Title="ContentPage2">
+    x:Class="Sample.BackNavigationCrash.Pages.ContentPage3"
+    Title="ContentPage3">
 
-    <Button Text="Navigate to MasterDetailPage1" VerticalOptions="Center">
+    <Button Text="Navigate to MasterDetailPage2" VerticalOptions="Center">
         <Button.Command>
             <local:NavigateToPageCommand>
                 <local:NavigateToPageCommand.Page>
-                    <pages:MasterDetailPage1/>
+                    <pages:MasterDetailPage2/>
                 </local:NavigateToPageCommand.Page>
             </local:NavigateToPageCommand>
         </Button.Command>
